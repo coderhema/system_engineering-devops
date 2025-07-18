@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
-# This script lists filenames after the first dash
+# This script lists filenames after the first dash in non-hidden files
 
-for file in *-*
-do
-  echo "${file#*-}"
+for file in *; do
+  # Skip hidden files
+  [[ "$file" == .* ]] && continue
+
+  # If the file contains a dash, print what comes after it
+  if [[ "$file" == *-* ]]; then
+    echo "${file#*-}"
+  fi
 done
