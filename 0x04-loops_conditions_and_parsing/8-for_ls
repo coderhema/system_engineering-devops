@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# This script lists the content of the current directory, showing only the part after the first dash (-)
+# This script lists filenames after the first dash
 
-for file in *-*; do
+for file in *-*
+do
   echo "${file#*-}"
 done
