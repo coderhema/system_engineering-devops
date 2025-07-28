@@ -1,0 +1,4 @@
+#!/bin/bash
+# Script to list all currently running processes with hierarchy and detailed info
+
+ps axjf
